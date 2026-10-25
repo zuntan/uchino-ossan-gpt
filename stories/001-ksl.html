@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="robots" content="noindex">
   <title>第1話 新言語KSLの設計と実装について — うちのおっさんGPT</title>
   <meta name="description" content="「だがしかし」がコードになったら？ ずんたんとおっさんの雑談から、新言語KSLと、このサイトが生まれるまで。">
   <link rel="stylesheet" href="../assets/css/style.css">
@@ -17,7 +16,7 @@
   <div class="episode-heading"><p class="eyebrow">第一話 ／ ことばとプログラミング</p>
   <h1>新言語KSLの<br>設計と実装について</h1>
   <p class="episode-lead">ことばの混ざり方の話をしていたら、<br>いつのまにか新しい言語と、このサイトの話になりました。</p>
-  <p class="edition-note">実際の会話をもとにした確認版です。改行・話者表示・コードの体裁を整えています。</p></div>
+  </div>
   <div class="conversation">
 <section class="message human" aria-label="ずんたんの発言">
   <img class="avatar" src="../assets/images/zuntan.svg" width="45" height="45" alt="" loading="lazy">
@@ -217,9 +216,9 @@ Warning: 警告が出ています。
 <ol>
 <li>編集：Markdownで会話・コードを記述する。</li>
 <li>表示：発言者ごとに左右へ吹き出しを振り分け、コードを整形する。</li>
-<li>公開：1エピソードを1ページとして投稿する。<br />
-ここで設計上、ひとつ面白い選択がある。</li>
+<li>公開：1エピソードを1ページとして投稿する。</li>
 </ol>
+<p>ここで設計上、ひとつ面白い選択がある。</p>
 <p>会話ログそのものを原稿にするか、面白い箇所だけ抜粋して編集するか。</p>
 <p>私は後者がよいと思う。今回もKSL誕生から、コンパイラ、無限再帰、警告文までをひと続きにすると、短いコントとして成立している。</p>
 <p>ただし、実際の会話と区別できるよう、編集した部分はわかる形にしておきたいね。</p>
@@ -261,9 +260,9 @@ Warning: 警告が出ています。
 <li>データベース：不要</li>
 <li>投稿管理システム：不要</li>
 <li>JavaScript：基本的に不要</li>
-<li>必要なもの：HTMLとCSS、静的ホスティング<br />
-しかも、原稿はこのチャットで作って、そのままHTMLにできる。</li>
+<li>必要なもの：HTMLとCSS、静的ホスティング</li>
 </ul>
+<p>しかも、原稿はこのチャットで作って、そのままHTMLにできる。</p>
 <p>マスターは出来上がったページを確認して、気に入ったら公開するだけ。</p>
 <p>記事が増えたら一覧ページを作ればいいし、最初は1ページで十分。</p>
 <p>……つまり、Webアプリ開発計画だったものが、ただのHTML置き場になったわけだ。</p>
@@ -272,6 +271,7 @@ Warning: 警告が出ています。
 </div></div>
 </section>
   </div>
+  <nav class="episode-pagination" aria-label="前後の小話"><a href="002-probability.html"><span>次の小話・第二話 →</span><strong>女子高生がこのサイトに来る確率</strong></a></nav>
   <div class="article-end"><p class="episode-colophon">ずんたん ＆ おっさん〈だらっくだ〉<br><small>会話・原稿：ずんたんとおっさん ／ ページ制作：センパイ</small></p><a class="button" href="../index.html#stories">小話のたなへ <span aria-hidden="true">←</span></a><a class="back-to-top" href="#main">この話のはじめへ ↑</a></div>
 </article>
 </main>
