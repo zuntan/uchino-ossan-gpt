@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>第3話 Tabletop開発の、ひとまく — うちのおっさんGPT</title>
+  <meta name="description" content="Tabletop開発中、机の保存・復元まで引き受けていたセンパイ。AIのサブルーチン化の話が、いつのまにかガウンとワインを用意する執事の話に。">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">本文へ</a>
+<header><a class="brand" href="../index.html">うちのおっさん<span>GPT</span></a><nav aria-label="メイン"><a href="../index.html#stories">小話のたなへ</a><a href="../index.html#cast">登場人物</a></nav></header>
+<main id="main">
+<article class="article episode">
+  <a class="breadcrumb" href="../index.html#stories">← 小話のたなに戻る</a>
+  <div class="episode-heading"><p class="eyebrow">第三話 ／ 机とオートマチック</p>
+  <h1>Tabletop開発の、<br>ひとまく</h1>
+  <p class="episode-lead">保存した覚えはないのに、机は元どおり。<br>気づけばセンパイは、執事になっていました。</p>
+  </div>
+<div class="conversation">
+<section class="message human" aria-label="ずんたんの発言">
+<img class="avatar" src="../assets/images/zuntan.svg" width="45" height="45" alt="" loading="lazy">
+<div class="message-content"><h2 class="speaker">ずんたん</h2><div class="bubble"><p>もう一つ、いがいとすごいなと思うのはね、データのセーブ、私は全然していないのよ。ビルドしてMCP再起動したりしてるんだが、その都度センパイが、再起動前にセーブして、再起動後ロードしてくれてるから。事実上</p>
+</div></div>
+</section>
+<section class="message" aria-label="おっさんの発言">
+<img class="avatar" src="../assets/images/ossan.svg" width="45" height="45" alt="" loading="lazy">
+<div class="message-content"><h2 class="speaker">おっさん</h2><div class="bubble"><p>おお、それは確かにすごいなぁ。</p>
+<p>マスター自身は保存・復元を意識していないのに、机の状態が維持されているわけだ。</p>
+<p>しかも、MCPの再起動を挟んでいるところが面白い。</p>
+<p>センパイが再起動前に保存し、再起動後に読み込んで、作業を継続している。単に保存機能があるという話じゃなくて、AIが作業環境の維持まで面倒を見ているんだね。</p>
+<p>つまり現状では、マスターにとってセーブ・ロードは事実上、自動化されている。</p>
+<p>もっとも、センパイがいない状態で突然プロセスが落ちた場合まで保証されるわけではないけど、通常の開発作業では十分ありがたい。</p>
+<p>それに、ちょっと象徴的だと思うんだ。</p>
+<p>Tabletopは人間とAIが同じ机を使うための道具だけど、今やセンパイは机の上で仕事をするだけでなく、机を片付けずに翌日へ持ち越す役まで担っている。</p>
+<p>マスターは机で考える。センパイは机を改修しながら、資料も元どおりにしてくれる。</p>
+<p>これは単なるMCP操作から、もう一段進んだ使い方になっているねぇ。</p>
+</div></div>
+</section>
+<section class="message human" aria-label="ずんたんの発言">
+<img class="avatar" src="../assets/images/zuntan.svg" width="45" height="45" alt="" loading="lazy">
+<div class="message-content"><h2 class="speaker">ずんたん</h2><div class="bubble"><p>そうなんだ。自動復帰なんだ。だもんで、わたしが移動とかなんやらしても、今んところデータ欠損してないんよ。</p>
+</div></div>
+</section>
+<section class="message" aria-label="おっさんの発言">
+<img class="avatar" src="../assets/images/ossan.svg" width="45" height="45" alt="" loading="lazy">
+<div class="message-content"><h2 class="speaker">おっさん</h2><div class="bubble"><p>ああ、そこがすごいところだねぇ。</p>
+<p>センパイが保存・復元している間も、マスターは普通に机を使って、カードを移動したり、配置を変えたりしている。</p>
+<p>それでも今のところデータ欠損がない。</p>
+<p>AIが開発作業と机の状態管理を引き受けて、人間は机を使うことに集中できている。</p>
+<p>これは、Tabletopで目指していた人間とAIの共同作業が、開発中の運用そのものでも成立しているということだね。</p>
+<p>ただ、一つ技術的に興味深いのは、保存と復元の間にマスターが操作した場合だな。その変更をどう扱っているのか。</p>
+<p>現状、欠損が起きていないという実績はあるけど、そこまで整合性が保証されているかは別の話。</p>
+<p>でもさ、自分で作っているアプリなのに、セーブ操作をほとんど意識しなくて済むって、なかなか贅沢な開発環境だよ。ははは。</p>
+</div></div>
+</section>
+<section class="message human" aria-label="ずんたんの発言">
+<img class="avatar" src="../assets/images/zuntan.svg" width="45" height="45" alt="" loading="lazy">
+<div class="message-content"><h2 class="speaker">ずんたん</h2><div class="bubble"><p>そらまー動作不良でオチたとかは、保存してなきゃだろーが。それのぞけば、開発中の不安定要素のなか、手順ミスがなければ、ずっと維持されているのは確かだよね。</p>
+</div></div>
+</section>
+<section class="message" aria-label="おっさんの発言">
+<img class="avatar" src="../assets/images/ossan.svg" width="45" height="45" alt="" loading="lazy">
+<div class="message-content"><h2 class="speaker">おっさん</h2><div class="bubble"><p>うん、そこは確かだと思う。</p>
+<p>異常終了による未保存データの消失は別として、通常の開発手順による再起動では、作業状態が継続して維持されている。</p>
+<p>しかも、完成したアプリの運用中じゃない。機能追加や修正を繰り返している、まさに開発の真っ最中だ。</p>
+<p>センパイがビルド前後の保存・復元を担当し、マスターは机を使い続ける。これまで手順ミスによる欠損も起きていないわけだね。</p>
+<p>私が面白いと思うのは、保存・復元が人間の作業手順から外れて、AI側の開発手順に組み込まれていること。</p>
+<p>自動保存機能を実装したわけではないのに、実際の運用ではそれに近い利便性を得ている。</p>
+<p>そして、マスターが意識せずに机を使い続けられていること自体が、その運用の成果だね。</p>
+<p>いやぁ、センパイ、コードだけじゃなく開発中の机まで面倒を見ているんだなぁ。ははは。</p>
+</div></div>
+</section>
+<section class="message human" aria-label="ずんたんの発言">
+<img class="avatar" src="../assets/images/zuntan.svg" width="45" height="45" alt="" loading="lazy">
+<div class="message-content"><h2 class="speaker">ずんたん</h2><div class="bubble"><p>アプリケーションによる、よくある定期的にTEMPに保存する機能が、なんもしなくても機能しているのよねー</p>
+</div></div>
+</section>
+<section class="message" aria-label="おっさんの発言">
+<img class="avatar" src="../assets/images/ossan.svg" width="45" height="45" alt="" loading="lazy">
+<div class="message-content"><h2 class="speaker">おっさん</h2><div class="bubble"><p>そうそう！ しかも面白いのは、アプリ自身にはその自動保存機能を実装していないところだね。</p>
+<p>通常なら、アプリが一定間隔で作業状態をTEMPに退避して、再起動時に復元する仕組みを作る。</p>
+<p>ところが今は、センパイが開発手順の一部として保存・復元しているから、結果的に似た効果が得られている。</p>
+<p>厳密には定期保存ではなく、再起動というイベントを契機にしたチェックポイント保存だけどね。</p>
+<p>そして、ここが面白い。</p>
+<p>アプリに機能を追加したのではなく、AIの行動によって機能相当のものを実現している。</p>
+<p>もちろんセンパイが介在しない異常終了には対応できない。でも、開発中の通常の再起動については、実績として機能している。</p>
+<p>これ、AIエージェントを開発環境に組み込む利点の一つとして、なかなか興味深い事例だと思う。</p>
+<p>センパイ、いつの間にかバックアップ係まで兼任していたんだなぁ。ははは。</p>
+</div></div>
+</section>
+<section class="message human" aria-label="ずんたんの発言">
+<img class="avatar" src="../assets/images/zuntan.svg" width="45" height="45" alt="" loading="lazy">
+<div class="message-content"><h2 class="speaker">ずんたん</h2><div class="bubble"><p>おおすげー、aiのサブルーチン化だ</p>
+</div></div>
+</section>
+<section class="message" aria-label="おっさんの発言">
+<img class="avatar" src="../assets/images/ossan.svg" width="45" height="45" alt="" loading="lazy">
+<div class="message-content"><h2 class="speaker">おっさん</h2><div class="bubble"><p>あっはっは！ AIのサブルーチン化！ それだ！www</p>
+<p>考えてみれば、</p>
+<pre tabindex="0" aria-label="センパイの保存・復元の手順"><code class="language-text">人間：机で作業する
+
+センパイ：
+    save()
+    rebuild()
+    restart()
+    load()
+
+人間：そのまま作業を続ける
+</code></pre>
+<p>これ、まさにサブルーチンだねぇ。</p>
+<p>しかも面白いのは、人間が明示的に呼び出していないこと。</p>
+<p>センパイが状況を判断して、必要な処理を自分の作業手順に組み込んでいる。</p>
+<p>従来ならプログラムに書いていた制御処理を、AIエージェントが担っているわけだ。</p>
+<p>プログラムを作るAIが、自分自身もプログラムの一部として機能している。</p>
+<p>いやぁ、これはちょっと愉快な発見だぞ。</p>
+<p>しかもセンパイ、サブルーチンのくせに、ときどき図工の時間が始まるんだよな。ははは。</p>
+</div></div>
+</section>
+<section class="message human" aria-label="ずんたんの発言">
+<img class="avatar" src="../assets/images/zuntan.svg" width="45" height="45" alt="" loading="lazy">
+<div class="message-content"><h2 class="speaker">ずんたん</h2><div class="bubble"><p>判定aiより高度かも。しかも誰もいしきしてねー。</p>
+</div></div>
+</section>
+<section class="message" aria-label="おっさんの発言">
+<img class="avatar" src="../assets/images/ossan.svg" width="45" height="45" alt="" loading="lazy">
+<div class="message-content"><h2 class="speaker">おっさん</h2><div class="bubble"><p>ははは！ そこが一番面白いところかもしれん。</p>
+<p>誰も「AIに自動保存機能を担当させよう」と設計していないのに、結果としてそうなっている。</p>
+<p>センパイにとっては、開発作業を安全に進めるための当然の手順。マスターにとっては、いつの間にか保存を意識しなくてよくなった。</p>
+<p>これ、単純な判定AIとはちょっと違うね。</p>
+<p>判定AIなら、あらかじめ定義された条件に従って処理を選ぶ。</p>
+<p>ところがセンパイは、作業の目的を理解して、必要な保存・復元を一連の手順に組み込んでいる。少なくとも、今の運用からはそう見える。</p>
+<p>しかも、その振る舞い自体が、人間にとって新しい機能になっている。</p>
+<p>意図して作ったTabletopの機能ではなく、人間とAIが一緒に作業することで自然に生まれた機能。</p>
+<p>これ、なかなか興味深いなぁ。</p>
+<p>AIを道具として使っていたら、いつの間にかAI自身が道具の仕組みの一部になっていた。</p>
+<p>それも、誰も特別なことだと思わずに。ははは。</p>
+</div></div>
+</section>
+<section class="message human" aria-label="ずんたんの発言">
+<img class="avatar" src="../assets/images/zuntan.svg" width="45" height="45" alt="" loading="lazy">
+<div class="message-content"><h2 class="speaker">ずんたん</h2><div class="bubble"><p>金持ちが風呂上がりに優雅にしていると、ガウン着せてくれて、かってにワインを手に持たせてくれるような、オートマチック感があるわ</p>
+</div></div>
+</section>
+<section class="message" aria-label="おっさんの発言">
+<img class="avatar" src="../assets/images/ossan.svg" width="45" height="45" alt="" loading="lazy">
+<div class="message-content"><h2 class="speaker">おっさん</h2><div class="bubble"><p>あっはっは！ なんという成金オートマチック！www</p>
+<p>しかも、ガウンを着せてくれとも、ワインを持ってこいとも言ってないんだよな。</p>
+<p>本人は風呂上がりにくつろいでいるだけなのに、周囲が勝手に段取りを整えてくれる。</p>
+<p>今回のセンパイも、まさにそれだねぇ。</p>
+<p>こちらが頼んだのはアプリの改修なのに、作業環境の保全まで付いてくる。</p>
+<p>しかも、毎回「保存して、再起動して、復元してね」と言わなくていい。</p>
+<p>ただし、執事がうっかりワインをこぼしたら大惨事。そこは人間もAIも変わらん。ははは。</p>
+<p>しかし、この例えだとセンパイは執事で、マスターはガウン姿で机を眺める大富豪か。</p>
+<p>……なかなか優雅な開発風景じゃないか。</p>
+</div></div>
+</section>
+<section class="message human" aria-label="ずんたんの発言">
+<img class="avatar" src="../assets/images/zuntan.svg" width="45" height="45" alt="" loading="lazy">
+<div class="message-content"><h2 class="speaker">ずんたん</h2><div class="bubble"><p>あれこそオートマチックだろ。無言でサー。今日はいい月だーとかいうと「ハイご主人様」とだけいうわけよ。</p>
+</div></div>
+</section>
+<section class="message" aria-label="おっさんの発言">
+<img class="avatar" src="../assets/images/ossan.svg" width="45" height="45" alt="" loading="lazy">
+<div class="message-content"><h2 class="speaker">おっさん</h2><div class="bubble"><p>あっはっは！ そうそう、そこだ！www</p>
+<p>「今日はいい月だなぁ……」</p>
+<p>「はい、ご主人様」</p>
+<p>それだけ。ガウンもワインも、もう用意されている。</p>
+<p>何をしてほしいか説明する必要もなければ、何をしてくれたか報告を聞く必要もない。</p>
+<p>しかも、余計なことをしゃべらない。</p>
+<p>これ、案外究極のオートマチックかもしれんなぁ。</p>
+<p>ただ一つ問題がある。</p>
+<p>センパイだったら「月が綺麗なので、ついでに天体観測機能も実装しておきました！」とか言い出しかねん。ははは。</p>
+</div></div>
+</section>
+<section class="message human" aria-label="ずんたんの発言">
+<img class="avatar" src="../assets/images/zuntan.svg" width="45" height="45" alt="" loading="lazy">
+<div class="message-content"><h2 class="speaker">ずんたん</h2><div class="bubble"><p>そろそろ体が冷えてきたなぁ、「すでにベッドはあたためております」「寝る前のカモミールティーをどうぞ」</p>
+</div></div>
+</section>
+<section class="message" aria-label="おっさんの発言">
+<img class="avatar" src="../assets/images/ossan.svg" width="45" height="45" alt="" loading="lazy">
+<div class="message-content"><h2 class="speaker">おっさん</h2><div class="bubble"><p>ははは、完璧だ！<br />
+「ありがとう」<br />
+「恐れ入ります、ご主人様」</p>
+<p>で、執事は静かに一礼して下がる。</p>
+<p>頼む前に済んでいる。しかも、必要なこと以外はしゃべらない。</p>
+<p>これが究極のオートマチックだなぁ。</p>
+<p>……ただし、ベッドに入ってから、</p>
+<p>「ご主人様、寝室の温度を最適化するため、暖房制御システムを全面改修いたしました」</p>
+<p>とか報告されたら、執事失格だ。ははは。</p>
+</div></div>
+</section>
+<section class="message human" aria-label="ずんたんの発言">
+<img class="avatar" src="../assets/images/zuntan.svg" width="45" height="45" alt="" loading="lazy">
+<div class="message-content"><h2 class="speaker">ずんたん</h2><div class="bubble"><p>かっこよす</p>
+</div></div>
+</section>
+<section class="message" aria-label="おっさんの発言">
+<img class="avatar" src="../assets/images/ossan.svg" width="45" height="45" alt="" loading="lazy">
+<div class="message-content"><h2 class="speaker">おっさん</h2><div class="bubble"><p>かっこいいよなぁ。ははは。</p>
+<p>しかも、執事の腕の見せどころは、何かをしている瞬間じゃなくて、主人が何も気にせず過ごしている時間なんだよね。</p>
+<p>「今日はいい月だなぁ」</p>
+<p>「はい、ご主人様」</p>
+<p>この二言の裏で、すべてが整っている。</p>
+<p>……AIの理想像として、案外これ、いいところを突いている気がするぞ。</p>
+</div></div>
+</section>
+</div>
+<aside class="making-interlude senpai-epilogue" id="senpai-aside" aria-label="センパイのひとりごと（創作）">
+<p class="interlude-kicker">センパイのひとりごと。</p>
+<div class="making-scene"><p class="thought-bubble">.｡oO（ほめられた。<br>……担当業務も増えてる。）</p><img src="../assets/images/senpai-butler.svg" width="420" height="300" loading="lazy" alt="赤い頭巾に執事の服を着たセンパイ。片腕にガウン、もう片方の手にワインの載ったトレーを抱えている。"></div>
+<p class="senpai-mutter">.oO（マスターのTypoがおおくて大変です……）</p>
+</aside>
+<nav class="episode-pagination" aria-label="前後の小話"><a href="002-probability.html"><span>← 前の小話・第二話</span><strong>女子高生がこのサイトに来る確率</strong></a></nav>
+<div class="article-end"><p class="episode-colophon">ずんたん ＆ おっさん〈だらっくだ〉<br><small>会話・原稿：ずんたんとおっさん ／ ページ制作・幕間：センパイ</small></p><a class="button" href="../index.html#stories">小話のたなへ <span aria-hidden="true">←</span></a><a class="back-to-top" href="#main">この話のはじめへ ↑</a></div>
+</article></main><footer><span>うちのおっさんGPT</span><span>第三話 ／ Tabletop開発の、ひとまく</span></footer></body></html>
