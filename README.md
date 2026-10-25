@@ -20,6 +20,7 @@ python3 -m http.server 8765 --bind 127.0.0.1
 - `stories/001-ksl.html`：第1話「新言語KSLの設計と実装について」
 - `stories/002-probability.html`：第2話「女子高生がこのサイトに来る確率」
 - `stories/003-tabletop-butler.html`：第3話「Tabletop開発の、ひとまく」
+- `stories/004-delete-to-create.html`：第4話「消すために、作る。」
 - `assets/css/style.css`：共通スタイル
 - `assets/images/`：人物の仮イラスト（SVG）
 - [初期構想・制作方針](docs/initial-concept.md)
@@ -44,3 +45,5 @@ PC幅とスマートフォン幅390pxでブラウザー表示を確認済みで�
 2026-10-25：ずんたんより、試作のpushとPages公開を依頼済み。公開完了はActionsとURLで別途確認します。
 
 第3話は [会話原稿](neta/episode-003/003-draft.md) の20発言をもとに制作しました。末尾に、ガウンとワインを抱えたセンパイの創作のひとりごとを添えています。元の会話との本文照合、PC幅・スマートフォン幅での表示、挿絵とページ間リンクを確認しています。
+
+第4話は [会話原稿](neta/episode-004/004-draft.md) の12発言をもとに制作しました。末尾にセンパイが作業へ呼び戻す挿絵と、Tabletop静的版への案内を添えています。小話一覧は同じ幅のカードを千鳥に並べ、Tabletopの小物SVGを余白に置く構成です。

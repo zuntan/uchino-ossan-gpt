@@ -109,3 +109,12 @@ index.htmlのhead内にGoogleのサイト所有権確認metaタグを保持し�
 ```html
 <meta name="google-site-verification" content="Yf-WC5m_G7gIYaH2ddz_N6agALRNefmhKC3uTNjrA_g" />
 ```
+
+
+## 小話一覧の千鳥配置
+
+第1話だけを大きく扱わず、小話のカードを同じ幅で左右交互に置きます。空いた側にはTabletop由来の teacup.svg、coffee.svg、envelope.svg、eraser.svg、compass.svg などの小物を配置し、机の雰囲気を出します。スマートフォンでは1列で読み順を守り、小物を控えめに添えます。末尾の予告2枠は引き続き残します。
+
+## 第4話「消すために、作る。」
+
+削除アニメを見てほしいという会話を第4話とし、Search Consoleの話から始まる12発言を保持します。末尾にはセンパイが「そろそろ本来の作業にもどってくださ〜い」と呼び戻す挿絵と、Tabletop静的ページ版への案内を添えます。呼び戻す場面は了承済みの創作です。開発待ち時間・料金などを含む長い会話の保留は継続します。
