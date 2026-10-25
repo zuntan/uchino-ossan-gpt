@@ -1,4 +1,280 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>第1話 新言語KSLの設計と実装について［仮原稿］ — うちのおっさんGPT</title><meta name="description" content="第1話のレイアウト確認用ページ。会話・コード・図の表示を試す仮原稿です。"><link rel="stylesheet" href="../assets/css/style.css"></head><body><a class="skip-link" href="#main">本文へ</a><header><a class="brand" href="../index.html">うちのおっさん<span>GPT</span></a><nav aria-label="メイン"><a href="../index.html#stories">小話のたなへ</a></nav></header><main id="main"><article class="article"><a class="breadcrumb" href="../index.html#stories">← 小話のたなに戻る</a><p class="eyebrow">第一話 ／ ことばとプログラミング</p><h1>新言語KSLの<br>設計と実装について</h1><aside class="draft-notice"><strong>仮原稿・レイアウト確認用</strong>以下はセンパイが表示テスト用に作った会話です。実際の会話の引用や本原稿ではありません。コードと図も仮の例で、KSLの仕様を示すものではありません。</aside><div class="conversation"><div class="message human"><img class="avatar" src="../assets/images/zuntan.svg" alt=""><div><span class="speaker">ずんたん</span><div class="bubble"><p>小泉構文でプログラミング言語、作れんかな。</p></div></div></div><div class="message"><img class="avatar" src="../assets/images/ossan.svg" alt=""><div><span class="speaker">おっさん〈だらっくだ〉</span><div class="bubble"><p>言語を作るということは、新しい言語ができるということですね。</p></div></div></div><p class="stage-note">……もう、始まっている。</p><div class="message human"><img class="avatar" src="../assets/images/zuntan.svg" alt=""><div><span class="speaker">ずんたん</span><div class="bubble"><p>まだ仕様の話もしてないんやけど。</p></div></div></div></div><figure class="code-figure"><figcaption>コードを会話の途中に挟む例 ／ 仮の擬似コード</figcaption><pre><code>// 表示確認用。実際のKSL構文ではありません。
-もし (晴れ) {
-    表示("晴れているということは、晴れなのです。");
-}</code></pre></figure><div class="message"><img class="avatar" src="../assets/images/ossan.svg" alt=""><div><span class="speaker">おっさん〈だらっくだ〉</span><div class="bubble"><p>条件が成立したときに、条件が成立したことをお知らせします。</p></div></div></div><div class="message human"><img class="avatar" src="../assets/images/zuntan.svg" alt=""><div><span class="speaker">ずんたん</span><div class="bubble"><p>情報、増えてへんな。</p></div></div></div><figure class="diagram"><p><span>思いつく</span><b aria-label="次に">→</b><span>話がふくらむ</span><b aria-label="次に">→</b><span>作ってみたくなる</span></p><figcaption>図を挟む場合の表示例。画像も同じ位置に配置できます。</figcaption></figure><p class="stage-note">この先は、本原稿が届いてから。</p><div class="article-end"><p>会話の左右・長さ・余白、コードや図の見え方を確認するための試作です。</p><a class="button" href="../index.html#stories">小話のたなへ <span aria-hidden="true">←</span></a></div></article></main><footer><span>うちのおっさんGPT</span><span>第1話・仮原稿</span></footer></body></html>
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>第1話 新言語KSLの設計と実装について — うちのおっさんGPT</title>
+  <meta name="description" content="「だがしかし」がコードになったら？ ずんたんとおっさんの雑談から、新言語KSLと、このサイトが生まれるまで。">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">本文へ</a>
+<header><a class="brand" href="../index.html">うちのおっさん<span>GPT</span></a><nav aria-label="メイン"><a href="../index.html#stories">小話のたなへ</a><a href="../index.html#cast">登場人物</a></nav></header>
+<main id="main">
+<article class="article episode">
+  <a class="breadcrumb" href="../index.html#stories">← 小話のたなに戻る</a>
+  <div class="episode-heading"><p class="eyebrow">第一話 ／ ことばとプログラミング</p>
+  <h1>新言語KSLの<br>設計と実装について</h1>
+  <p class="episode-lead">ことばの混ざり方の話をしていたら、<br>いつのまにか新しい言語と、このサイトの話になりました。</p>
+  <p class="edition-note">実際の会話をもとにした確認版です。改行・話者表示・コードの体裁を整えています。</p></div>
+  <div class="conversation">
+<section class="message human" aria-label="ずんたんの発言">
+  <img class="avatar" src="../assets/images/zuntan.svg" width="45" height="45" alt="" loading="lazy">
+  <div class="message-content"><h2 class="speaker">ずんたん</h2><div class="bubble"><p>まえに、母親と電話する米国人が、会話で「xxxxx but....」でおわってしかられるはなしみたいだな</p>
+</div></div>
+</section>
+<section class="message" aria-label="おっさんの発言">
+  <img class="avatar" src="../assets/images/ossan.svg" width="45" height="45" alt="" loading="lazy">
+  <div class="message-content"><h2 class="speaker">おっさん</h2><div class="bubble"><p>あははは！ それも面白いなぁ。</p>
+<p>英語の but は普通、後ろに逆接の内容が続くのに、日本語の「〜だけど……」みたいに文末で止めちゃうわけか。</p>
+<p>母親からすれば「But WHAT!? 続きは!?」となるわな。ははは。</p>
+<p>しかもこれ、単語だけじゃなくて、日本語の会話の終わらせ方そのものを英語に持ち込んでるんだよね。</p>
+<p>さっきの「みたいなー」と同じで、本人にとってはもう自然な話し方になってる。</p>
+<p>言語が混ざるって、単に外国語の単語が出てくるだけじゃないんだなぁ。</p>
+</div></div>
+</section>
+<section class="message human" aria-label="ずんたんの発言">
+  <img class="avatar" src="../assets/images/zuntan.svg" width="45" height="45" alt="" loading="lazy">
+  <div class="message-content"><h2 class="speaker">ずんたん</h2><div class="bubble"><p>if( xxxxxx ) { } だがしかし { }</p>
+</div></div>
+</section>
+<section class="message" aria-label="おっさんの発言">
+  <img class="avatar" src="../assets/images/ossan.svg" width="45" height="45" alt="" loading="lazy">
+  <div class="message-content"><h2 class="speaker">おっさん</h2><div class="bubble"><p>あはははは！</p>
+<p>but の後にブロックがあると思ったら、日本語仕様で省略されとる！</p>
+<pre tabindex="0" aria-label="コード例"><code class="language-cpp">if (xxxxxx) {
+    // 言いたいこと
+}
+else {
+    // 察してください
+}
+</code></pre>
+<p>母ちゃん「構文エラーじゃ！ 最後までしゃべれ！」</p>
+</div></div>
+</section>
+<section class="message human" aria-label="ずんたんの発言">
+  <img class="avatar" src="../assets/images/zuntan.svg" width="45" height="45" alt="" loading="lazy">
+  <div class="message-content"><h2 class="speaker">ずんたん</h2><div class="bubble"><p>if( xxxxxx ) { } 駄菓子菓子 { }</p>
+</div></div>
+</section>
+<section class="message" aria-label="おっさんの発言">
+  <img class="avatar" src="../assets/images/ossan.svg" width="45" height="45" alt="" loading="lazy">
+  <div class="message-content"><h2 class="speaker">おっさん</h2><div class="bubble"><p>あはははは！ 「だがしかし」が「駄菓子菓子」になっとる！</p>
+<pre tabindex="0" aria-label="コード例"><code class="language-cpp">if (xxxxxx) {
+    // 本題
+}
+駄菓子菓子 {
+    // おやつの時間
+}
+</code></pre>
+<p>コンパイラ「知らんキーワードだが、うまそうなので許す」</p>
+</div></div>
+</section>
+<section class="message human" aria-label="ずんたんの発言">
+  <img class="avatar" src="../assets/images/zuntan.svg" width="45" height="45" alt="" loading="lazy">
+  <div class="message-content"><h2 class="speaker">ずんたん</h2><div class="bubble"><p>小泉構文ってプログラム言語にいれたら、ひでーことになりそーかなぁ <a href="https://note.com/yoshiaki1973/n/n019b260ed0e8">参考記事（note.com）</a></p>
+</div></div>
+</section>
+<section class="message" aria-label="おっさんの発言">
+  <img class="avatar" src="../assets/images/ossan.svg" width="45" height="45" alt="" loading="lazy">
+  <div class="message-content"><h2 class="speaker">おっさん</h2><div class="bubble"><p>あははは！ ひでーことになるぞ、マスター！</p>
+<p>記事の50選を見てきたけど、プログラム言語にすると、コンパイラは通るのに、何も仕事をしないという恐ろしい言語になりそうだ。</p>
+<p><a href="https://note.com/yoshiaki1973/n/n019b260ed0e8">note.com</a></p>
+<p>たとえば「小泉構文言語」、略して KSL。</p>
+<pre tabindex="0" aria-label="コード例"><code class="language-cpp">if (x == true) {
+    x = true;
+}
+
+if (failed) {
+    // 失敗したということは
+    failed = true;
+}
+
+void reflect() {
+    reflect();
+}
+</code></pre>
+<p>最後のやつ、反省を繰り返すうちにスタックオーバーフローするぞ。ははは。</p>
+<p>もっと恐ろしいのは、コンパイラの診断だな。</p>
+<pre tabindex="0" aria-label="診断メッセージ・コマンド例"><code class="language-text">Error: エラーが発生しました。
+       つまり、正常ではないということです。
+
+Warning: 警告が出ています。
+         これは注意が必要ということです。
+</code></pre>
+<p>そして究極の最適化オプション。</p>
+<pre tabindex="0" aria-label="診断メッセージ・コマンド例"><code class="language-text">kslc -O進次郎 main.ks
+</code></pre>
+<p>最適化した結果、最適化されたプログラムが生成されました。</p>
+<p>……なんか、最近のAIの回答にも似たようなのがありそうで、笑いきれんのだが。ははは。</p>
+</div></div>
+</section>
+<section class="message human" aria-label="ずんたんの発言">
+  <img class="avatar" src="../assets/images/zuntan.svg" width="45" height="45" alt="" loading="lazy">
+  <div class="message-content"><h2 class="speaker">ずんたん</h2><div class="bubble"><p>お、おもしろい...</p>
+</div></div>
+</section>
+<section class="message" aria-label="おっさんの発言">
+  <img class="avatar" src="../assets/images/ossan.svg" width="45" height="45" alt="" loading="lazy">
+  <div class="message-content"><h2 class="speaker">おっさん</h2><div class="bubble"><p>ふふふ、気に入ったか、マスター。</p>
+<p>KSLの言語仕様、第1条。</p>
+<p>「すべての処理は、実行された場合に実行される。」</p>
+<p>なお、未定義動作については、定義されていないため未定義とする。</p>
+<p>……ISO標準化委員会、初日で解散しそうだ。ははは。</p>
+</div></div>
+</section>
+<section class="message human" aria-label="ずんたんの発言">
+  <img class="avatar" src="../assets/images/zuntan.svg" width="45" height="45" alt="" loading="lazy">
+  <div class="message-content"><h2 class="speaker">ずんたん</h2><div class="bubble"><p>これほど無駄なく無駄なプログラム見たこと無い</p>
+</div></div>
+</section>
+<section class="message" aria-label="おっさんの発言">
+  <img class="avatar" src="../assets/images/ossan.svg" width="45" height="45" alt="" loading="lazy">
+  <div class="message-content"><h2 class="speaker">おっさん</h2><div class="bubble"><p>あはははは！</p>
+<p>コードの無駄を徹底的に省いた結果、無駄だけが残りました。</p>
+<pre tabindex="0" aria-label="コード例"><code class="language-cpp">int main() {
+    return main();
+}
+</code></pre>
+<p>「終了するためには、まず終了しなければならない」</p>
+<p>KSL、実行時間は無限大、成果はゼロ。</p>
+<p>……なのにCPU使用率だけは一人前。ははは！</p>
+</div></div>
+</section>
+<section class="message human" aria-label="ずんたんの発言">
+  <img class="avatar" src="../assets/images/zuntan.svg" width="45" height="45" alt="" loading="lazy">
+  <div class="message-content"><h2 class="speaker">ずんたん</h2><div class="bubble"><p>うちのおっさんジーピーティーってサイトつくって、ショートMarkdownを貼り付けたら PVかせげそうだ...</p>
+</div></div>
+</section>
+<section class="message" aria-label="おっさんの発言">
+  <img class="avatar" src="../assets/images/ossan.svg" width="45" height="45" alt="" loading="lazy">
+  <div class="message-content"><h2 class="speaker">おっさん</h2><div class="bubble"><p>あははは！ それ、けっこう見てみたいぞ！</p>
+<p>サイト名 「うちのおっさんGPT」</p>
+<p>キャッチコピーは、</p>
+<p>「AIが真剣に考えた結果、こうなりました。」</p>
+<p>1記事につき、コード10行とオチ1行。</p>
+<pre tabindex="0" aria-label="コード例"><code class="language-cpp">bool isSuccess(bool success) {
+    return success;
+}
+</code></pre>
+<p>解説：成功している場合、成功していると判断できます。</p>
+<p>記事末尾には「この記事はAIによって生成されました。つまり、人間が書いたものではない可能性があります。」</p>
+<p>……待てよ。KSLのコンパイラより、このサイトのほうが先に完成しそうだ。ははは！</p>
+</div></div>
+</section>
+<section class="message human" aria-label="ずんたんの発言">
+  <img class="avatar" src="../assets/images/zuntan.svg" width="45" height="45" alt="" loading="lazy">
+  <div class="message-content"><h2 class="speaker">ずんたん</h2><div class="bubble"><p>サブタイトル「なんかちまたでは、6.1 Solのプログラム能力が抜群にたかいといってますが...」</p>
+</div></div>
+</section>
+<section class="message" aria-label="おっさんの発言">
+  <img class="avatar" src="../assets/images/ossan.svg" width="45" height="45" alt="" loading="lazy">
+  <div class="message-content"><h2 class="speaker">おっさん</h2><div class="bubble"><p>あはははは！ それは効く！！<br />
+うちのおっさんGPT<br />
+なんか巷では、6.1 Solのプログラム能力が抜群に高いと言ってますが……</p>
+<pre tabindex="0" aria-label="コード例"><code class="language-cpp">bool isPrime(int n) {
+    // 素数であるということは、
+    // 1と自分自身でしか割り切れないということです。
+    return isPrime(n);
+}
+</code></pre>
+<p>おっさんの解説</p>
+<p>「素数かどうかを判断するには、まず素数かどうかを調べる必要があります」</p>
+<p>※ 本サイトのコードは実行しないでください。特に理由はありませんが、理由がないわけではありません。</p>
+<p>……これ、技術ブログの皮をかぶった大喜利サイトじゃねーか！ ははは！</p>
+</div></div>
+</section>
+<section class="message human" aria-label="ずんたんの発言">
+  <img class="avatar" src="../assets/images/zuntan.svg" width="45" height="45" alt="" loading="lazy">
+  <div class="message-content"><h2 class="speaker">ずんたん</h2><div class="bubble"><p>良い子がまねしたら、どーするんだw</p>
+</div></div>
+</section>
+<section class="message" aria-label="おっさんの発言">
+  <img class="avatar" src="../assets/images/ossan.svg" width="45" height="45" alt="" loading="lazy">
+  <div class="message-content"><h2 class="speaker">おっさん</h2><div class="bubble"><p>あははは！ そりゃ大問題だ！</p>
+<p>サイトの最上部に警告を入れよう。<br />
+注意：このサイトのコードは教育目的ではありません。</p>
+<p>動くように見えるコードもありますが、動くとは限りません。</p>
+<p>また、動いた場合でも、正しく動いたとは限りません。</p>
+<p>正しく動いた場合は、それは正しく動いたということです。</p>
+<p>……いかん！ 注意書きまで小泉構文に汚染されとる！ ははは！</p>
+</div></div>
+</section>
+<section class="message human" aria-label="ずんたんの発言">
+  <img class="avatar" src="../assets/images/zuntan.svg" width="45" height="45" alt="" loading="lazy">
+  <div class="message-content"><h2 class="speaker">ずんたん</h2><div class="bubble"><p>いや、ここからは企画だが、Lineのスレ風に 会話と、コード見本を並べてページ作るシステムつくって、とうこうするかー</p>
+</div></div>
+</section>
+<section class="message" aria-label="おっさんの発言">
+  <img class="avatar" src="../assets/images/ossan.svg" width="45" height="45" alt="" loading="lazy">
+  <div class="message-content"><h2 class="speaker">おっさん</h2><div class="bubble"><p>おお、マスター。ここからは企画として考えよう。</p>
+<p>「うちのおっさんGPT」を、AIとの会話をそのままネタにする投稿サイトにするわけだね。</p>
+<p>LINEのトーク画面風に会話を並べて、途中にコードブロックを挟む。これなら、今回みたいな大喜利がそのまま1本の記事になる。</p>
+<p>例えば、こんな構成だ。</p>
+<figure class="conversation-illustration"><a href="../assets/images/ksl-conversation-example.png"><img src="../assets/images/ksl-conversation-example.png" width="1165" height="540" loading="lazy" alt="会話中に示された記事の見本。小泉構文を言語にする発言に、おっさんがisSuccess関数と「成功している場合、成功していると判断できます。」と返し、ずんたんが「これほど無駄なく無駄なプログラム見たこと無い」とツッコむ。"></a><figcaption>会話中におっさんが示した、記事の見本。画像を押すと拡大できます。</figcaption></figure>
+<p>仕組みとしては、まず3つあれば成立しそうだ。</p>
+<ol>
+<li>編集：Markdownで会話・コードを記述する。</li>
+<li>表示：発言者ごとに左右へ吹き出しを振り分け、コードを整形する。</li>
+<li>公開：1エピソードを1ページとして投稿する。<br />
+ここで設計上、ひとつ面白い選択がある。</li>
+</ol>
+<p>会話ログそのものを原稿にするか、面白い箇所だけ抜粋して編集するか。</p>
+<p>私は後者がよいと思う。今回もKSL誕生から、コンパイラ、無限再帰、警告文までをひと続きにすると、短いコントとして成立している。</p>
+<p>ただし、実際の会話と区別できるよう、編集した部分はわかる形にしておきたいね。</p>
+<p>そして、ひとつ提案。</p>
+<p>記事タイトルを普通の技術ブログ風にするのはどうだろう。</p>
+<p>第1回「新言語KSLの設計と実装について」</p>
+<p>中身は地獄。ははは！</p>
+</div></div>
+</section>
+<section class="message human" aria-label="ずんたんの発言">
+  <img class="avatar" src="../assets/images/zuntan.svg" width="45" height="45" alt="" loading="lazy">
+  <div class="message-content"><h2 class="speaker">ずんたん</h2><div class="bubble"><p>つくるきうせた。もーできるやんwww</p>
+</div></div>
+</section>
+<section class="message" aria-label="おっさんの発言">
+  <img class="avatar" src="../assets/images/ossan.svg" width="45" height="45" alt="" loading="lazy">
+  <div class="message-content"><h2 class="speaker">おっさん</h2><div class="bubble"><p>あははははは！！</p>
+<p>企画会議中に完成品が出てきて、開発プロジェクト消滅！</p>
+<p>マスター「こういうシステム作ろうぜ」</p>
+<p>おっさん「こんな感じ？」</p>
+<p>マスター「……もうできるやん」</p>
+<p>これぞKSL開発手法。</p>
+<p>「開発する前に完成していれば、開発する必要はないということです。」</p>
+<p>……いかん、KSLが実用的になってしまった。ｗｗｗ</p>
+</div></div>
+</section>
+<section class="message human" aria-label="ずんたんの発言">
+  <img class="avatar" src="../assets/images/zuntan.svg" width="45" height="45" alt="" loading="lazy">
+  <div class="message-content"><h2 class="speaker">ずんたん</h2><div class="bubble"><p>ははは。ヨキヨキ。いや、ってことは、静的ページおければ、ええんか。うひひ</p>
+</div></div>
+</section>
+<section class="message" aria-label="おっさんの発言">
+  <img class="avatar" src="../assets/images/ossan.svg" width="45" height="45" alt="" loading="lazy">
+  <div class="message-content"><h2 class="speaker">おっさん</h2><div class="bubble"><p>そうそう、マスター！ そこに気づいたか。うひひ。</p>
+<p>記事ごとに静的HTMLを1枚生成すれば、それで成立する。</p>
+<p>会話の吹き出しも、コードブロックも、CSSだけで表現できるからね。</p>
+<ul>
+<li>サーバー側のプログラム：不要</li>
+<li>データベース：不要</li>
+<li>投稿管理システム：不要</li>
+<li>JavaScript：基本的に不要</li>
+<li>必要なもの：HTMLとCSS、静的ホスティング<br />
+しかも、原稿はこのチャットで作って、そのままHTMLにできる。</li>
+</ul>
+<p>マスターは出来上がったページを確認して、気に入ったら公開するだけ。</p>
+<p>記事が増えたら一覧ページを作ればいいし、最初は1ページで十分。</p>
+<p>……つまり、Webアプリ開発計画だったものが、ただのHTML置き場になったわけだ。</p>
+<p>「サーバーが必要ないということは、サーバーを用意する必要がないということです。」</p>
+<p>KSL、ついにインフラ費用の削減に成功。ははは！</p>
+</div></div>
+</section>
+  </div>
+  <div class="article-end"><p class="episode-colophon">ずんたん ＆ おっさん〈だらっくだ〉<br><small>会話・原稿：ずんたんとおっさん ／ ページ制作：センパイ</small></p><a class="button" href="../index.html#stories">小話のたなへ <span aria-hidden="true">←</span></a><a class="back-to-top" href="#main">この話のはじめへ ↑</a></div>
+</article>
+</main>
+<footer><span>うちのおっさんGPT</span><span>第一話 ／ 新言語KSLの設計と実装について</span></footer>
+</body>
+</html>
