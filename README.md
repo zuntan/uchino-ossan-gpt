@@ -22,6 +22,7 @@ python3 -m http.server 8765 --bind 127.0.0.1
 - `stories/003-tabletop-butler.html`：第3話「Tabletop開発の、ひとまく」
 - `stories/004-delete-to-create.html`：第4話「消すために、作る。」
 - `stories/005-ai-conference.html`：第5話「国際AI学会、開幕。」
+- `stories/006-izakaya-hallucination.html`：第6話「居酒屋ハルシネーション」
 - `assets/css/style.css`：共通スタイル
 - `assets/images/`：人物の仮イラスト（SVG）
 - [初期構想・制作方針](docs/initial-concept.md)
@@ -50,3 +51,5 @@ PC幅とスマートフォン幅390pxでブラウザー表示を確認済みで�
 第4話は [会話原稿](neta/episode-004/004-draft.md) の12発言をもとに制作しました。末尾にセンパイが作業へ呼び戻す挿絵と、Tabletop静的版への案内を添えています。小話一覧は同じ幅のカードを千鳥に並べ、Tabletopの小物SVGを余白に置く構成です。
 
 第5話は、机で修正された[会話原稿](neta/episode-005/005-draft.md)の38発言をもとに制作しました。比較データ4か所を表に整形し、長い会話の途中へ移動できる目次を添えています。
+
+第6話は[確認用原稿](neta/episode-006/006-draft.md)の50発言（原稿49発言＋仕様書への反応）を掲載し、机から取り出した居酒屋・スナック・ラウンジの画像3点と、長い会話のためのページ内目次を添えています。

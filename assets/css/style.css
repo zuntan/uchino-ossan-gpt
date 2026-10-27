@@ -39,3 +39,22 @@
 
 /* Senpai calls the two back from playing with the eraser. */
 .back-to-work .making-scene{padding-top:85px}.speech-bubble{position:absolute;right:0;top:0;margin:0;padding:13px 24px;background:#fffdf7;border:1px solid #a99c7d;border-radius:20px;font-size:14px;line-height:1.8;transform:rotate(3deg);color:#665442}.speech-bubble:before,.speech-bubble:after{content:"";position:absolute;left:42px;bottom:-15px;border-style:solid;border-width:15px 10px 0;border-color:#a99c7d transparent transparent}.speech-bubble:after{left:43px;bottom:-13px;border-width:14px 9px 0;border-top-color:#fffdf7}.episode-try{margin:35px 0;padding:20px 24px;border:1px solid #bcc5b2;border-radius:5px;background:#e8eee3}.episode-try p{font-size:12px;color:var(--muted);margin:0 0 10px}.episode-try a{display:inline-flex;align-items:center;min-height:44px;font-size:14px;font-weight:700}.episode-try small{display:block;font-size:11px;color:var(--muted);margin-top:8px}@media(max-width:700px){.speech-bubble{font-size:12px;padding:10px 20px;right:6px}.back-to-work .making-scene{padding-top:80px}.episode-try{padding:18px}.episode-try a{font-size:13px}}
+
+/* Full-width scenes along the sixth conversation. */
+.episode-scene{margin:42px 0 50px}.episode-scene img{width:100%;height:auto;border:1px solid #b9b6a5;border-radius:6px}@media(max-width:700px){.episode-scene{margin:30px 0 36px}}
+
+/* A small pause where the original lounge picture once stood. */
+.missing-illustration{margin:48px 0;text-align:center;font-family:"Yu Mincho",serif;font-size:13px;line-height:2;color:var(--muted)}.missing-illustration:before,.missing-illustration:after{content:"〜 〜 〜";display:block;color:#aaa797;letter-spacing:.18em;margin:10px 0}@media(max-width:700px){.missing-illustration{margin:36px 12px;font-size:12px}}
+
+.after-work .making-scene{padding-top:64px}.after-work .thought-bubble{right:0;font-size:13px}@media(max-width:700px){.after-work .thought-bubble{right:0;font-size:11px;padding:10px 14px}}
+
+/* A literal specification sheet, separate from the conversation. */
+.ossan-spec{margin:45px 0 55px;padding:28px 32px;background:#fffdf7;border:1px solid #b6b6a6;box-shadow:4px 4px 0 #e7e3d5;font-family:ui-monospace,"Yu Gothic",Meiryo,monospace;font-size:12px;line-height:1.95;overflow-wrap:anywhere}.ossan-spec-heading{display:block;width:100%;margin:0 0 22px;padding:0 0 16px;border-bottom:2px solid var(--ink)}.ossan-spec-heading span{font-size:10px;letter-spacing:.2em;color:var(--muted)}.ossan-spec-heading h2{font-family:inherit;font-size:19px;margin:4px 0 0}.ossan-spec>ol{margin:0;padding-left:2.4em}.ossan-spec>ol>li{padding:0 0 15px 8px;margin:0 0 15px;border-bottom:1px solid var(--line)}.ossan-spec>ol>li:last-child{padding-bottom:0;margin-bottom:0;border-bottom:0}.ossan-spec li::marker{color:var(--muted)}.ossan-spec ul{padding-left:1.5em;margin:10px 0}.ossan-spec li p{margin:10px 0 0}@media(max-width:700px){.ossan-spec{padding:22px 16px;margin:35px 0 42px;font-size:12px}.ossan-spec-heading h2{font-size:17px}.ossan-spec>ol{padding-left:2em}.ossan-spec>ol>li{padding-left:4px}}
+
+/* Give each piece of stationery its own casually scattered angle. */
+.story-row:nth-child(6n+1) .story-prop{transform:rotate(-9deg)}
+.story-row:nth-child(6n+2) .story-prop{transform:rotate(12deg)}
+.story-row:nth-child(6n+3) .story-prop{transform:rotate(-5deg)}
+.story-row:nth-child(6n+4) .story-prop{transform:rotate(8deg)}
+.story-row:nth-child(6n+5) .story-prop{transform:rotate(-13deg)}
+.story-row:nth-child(6n) .story-prop{transform:rotate(5deg)}
