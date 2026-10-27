@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280">
+  <ellipse cx="236" cy="247" rx="209" ry="10" fill="#e9e2cf"/>
+  <ellipse cx="545" cy="247" rx="68" ry="8" fill="#e9e2cf"/>
+  <g stroke="#686b5e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="#fffdf7">
+    <path d="M30 16h91q12 0 12 12v20q0 12-12 12H89L75 74l2-14H30q-12 0-12-12V28q0-12 12-12z"/>
+    <path d="M155 31h89q12 0 12 12v18q0 12-12 12h-22l-9 13-6-13h-52q-12 0-12-12V43q0-12 12-12z"/>
+    <path d="M289 8h91q12 0 12 12v23q0 12-12 12h-33l-2 17-13-17h-43q-12 0-12-12V20q0-12 12-12z"/>
+    <path d="M39 32h35m-35 12h53m70 5h43m-43 12h26m119-36h36m-36 12h20" fill="none"/>
+    <path d="M108 29v11m0 7v1m120-4v11m0 6v1m136-43v13m0 7v1" fill="none" stroke-width="3"/>
+  </g>
+  <g stroke="#34372f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Name-faced pictograms, deliberately without portraits or logos. -->
+    <g fill="#d8d1c1">
+      <circle cx="77" cy="113" r="36"/>
+      <path d="M49 162q28-18 56 0l8 46H41z"/>
+      <path d="m49 171-24 10-9-20m89 12 28-18 6-17m-81 72-9 35m48-35 10 35" fill="none" stroke-width="10"/>
+    </g>
+    <g fill="#d5dfd6">
+      <circle cx="211" cy="125" r="36"/>
+      <path d="M183 174q28-18 56 0l8 34h-72z"/>
+      <path d="m183 181-24-22-13 8m93 16 25-20 11 9m-77 38-10 35m47-35 10 35" fill="none" stroke-width="10"/>
+    </g>
+    <g fill="#ded2de">
+      <circle cx="345" cy="111" r="36"/>
+      <path d="M317 160q28-18 56 0l8 48h-72z"/>
+      <path d="m317 173-25-12-4-23m84 35 27-12 9 15m-77 34-10 35m47-35 10 35" fill="none" stroke-width="10"/>
+    </g>
+    <!-- Gemini approaches from the right, with a small walking stride. -->
+    <g fill="#cbdce2">
+      <circle cx="550" cy="111" r="40"/>
+      <path d="M526 162q26-16 51 2l-4 43h-58z"/>
+      <path d="m526 174-24 12-12-8m85-5 19 21-8 13m-54 2-21 34h-17m66-34 16 19 15 4" fill="none" stroke-width="10"/>
+    </g>
+    <path d="m597 117 17-2m-13 20 18 2m-15 17 14 5" stroke="#a99c7d" stroke-width="2"/>
+    <path d="m472 239 9-3m113 3 8 4" stroke="#a99c7d" stroke-width="2"/>
+  </g>
+  <g fill="#34372f" font-family="sans-serif" font-size="19" font-weight="600" text-anchor="middle">
+    <text x="77" y="120">Astra</text><text x="211" y="132">Opus</text><text x="345" y="118" font-size="16">Wonder</text><text x="550" y="118" font-size="18">Gemini</text>
+  </g>
+  <g fill="#686b5e" font-family="sans-serif" font-size="12" text-anchor="middle" letter-spacing="2">
+    <text x="210" y="273">わいわい　がやがや</text><text x="548" y="273">とことこ</text>
+  </g>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 330">
+  <ellipse cx="300" cy="291" rx="270" ry="15" fill="#e9e2cf"/>
+  <g stroke="#34372f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Luna: the younger colleague, already typing. -->
+    <path d="M44 223q6-58 63-58t65 58" fill="#9badc1"/>
+    <path d="M66 123q-2-53 42-53t43 53v22q-3 40-43 40t-42-40z" fill="#f2d3af"/>
+    <path d="M65 117q-9-52 43-52 49 0 45 51l-22-20-10 14-16-17-19 20z" fill="#62665b"/>
+    <path d="M68 112h82v15H68z" fill="#9badc1"/>
+    <path d="m84 140 10 3m29 0 10-3m-30 18q8 5 17-1" fill="none"/>
+    <path d="m53 213 118 0-12 58H66z" fill="#c2d0d7"/>
+    <path d="M51 272h122l9 8H43z" fill="#eee9d9"/>
+    <path d="m100 234-10 9 10 8m17-17 10 9-10 8" fill="none"/>
+    <!-- Senpai: red headband, one arm raised and the other directing the work. -->
+    <path d="M231 240q3-74 71-74t71 74" fill="#b96d5c"/>
+    <path d="M252 112q-1-64 50-64t50 64v23q-3 43-50 43t-50-43z" fill="#f2d3af"/>
+    <path d="M252 94q-5-48 50-48 54 0 50 48z" fill="#b96d5c"/>
+    <path d="M252 86h100v24H252z" fill="#b96d5c"/>
+    <path d="m352 91 24-8-7 23 14 15-31-8" fill="#b96d5c"/>
+    <path d="m272 122 13 4m34 0 13-4m-32 12-4 9h10" fill="none"/>
+    <path d="M286 151q16 21 33-1z" fill="#fffaf0"/>
+    <path d="m278 201 18 12-18 12m30 0h17" fill="none"/>
+    <path d="M248 202q-33-12-43-50l-6-26m-2 0-8-9m9 5-1-14m5 13 6-10" fill="none" stroke-width="12"/>
+    <path d="M248 202q-33-12-43-50l-6-26m-2 0-8-9m9 5-1-14m5 13 6-10" fill="none" stroke="#f2d3af" stroke-width="7"/>
+    <path d="m352 202 35 13 28-24" fill="none" stroke-width="12"/>
+    <path d="m352 202 35 13 28-24m-1 0 10-10m-9 9 14-1" fill="none" stroke="#f2d3af" stroke-width="7"/>
+    <path d="m275 241-4 43h-18m77-43 5 43h19" fill="none"/>
+    <path d="m182 79-10-11m18-3-2-17m194 92 14-5m-16 23 18 3" stroke="#a99c7d" fill="none"/>
+    <!-- Terra: the new assistant, carrying the browser-check notes. -->
+    <path d="M435 233q2-65 64-65t65 65" fill="#96b4a3"/>
+    <path d="M458 123q-2-51 41-51t42 51v22q-3 40-42 40t-41-40z" fill="#f2d3af"/>
+    <path d="M457 115q-7-49 42-49 48 0 44 49l-17-22-16 17-21-17-14 21z" fill="#62665b"/>
+    <path d="M458 111h84v16h-84z" fill="#96b4a3"/>
+    <path d="m476 141 10-2m27 0 10 2m-29 17q8 7 17 0" fill="none"/>
+    <path d="m460 218-12 14m98-14 9 17" fill="none" stroke-width="10"/>
+    <path d="m460 218-12 14m98-14 9 17" fill="none" stroke="#f2d3af" stroke-width="6"/>
+    <rect x="467" y="207" width="71" height="63" rx="4" fill="#fffaf0" transform="rotate(7 503 239)"/>
+    <path d="m478 224 7 7 12-15m-17 28 7 7 12-15m7-12h20m-19 21h15" fill="none" stroke-width="2"/>
+    <path d="m474 271-2 13h-15m68-13 3 13h15" fill="none"/>
+  </g>
+  <g fill="#686b5e" font-family="sans-serif" font-size="13" text-anchor="middle" letter-spacing="1">
+    <text x="109" y="317">Luna</text><text x="301" y="317">センパイ</text><text x="502" y="317">Terra</text>
+  </g>
+</svg>

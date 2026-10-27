@@ -21,6 +21,7 @@ python3 -m http.server 8765 --bind 127.0.0.1
 - `stories/002-probability.html`：第2話「女子高生がこのサイトに来る確率」
 - `stories/003-tabletop-butler.html`：第3話「Tabletop開発の、ひとまく」
 - `stories/004-delete-to-create.html`：第4話「消すために、作る。」
+- `stories/005-ai-conference.html`：第5話「国際AI学会、開幕。」
 - `assets/css/style.css`：共通スタイル
 - `assets/images/`：人物の仮イラスト（SVG）
 - [初期構想・制作方針](docs/initial-concept.md)
@@ -47,3 +48,5 @@ PC幅とスマートフォン幅390pxでブラウザー表示を確認済みで�
 第3話は [会話原稿](neta/episode-003/003-draft.md) の20発言をもとに制作しました。末尾に、ガウンとワインを抱えたセンパイの創作のひとりごとを添えています。元の会話との本文照合、PC幅・スマートフォン幅での表示、挿絵とページ間リンクを確認しています。
 
 第4話は [会話原稿](neta/episode-004/004-draft.md) の12発言をもとに制作しました。末尾にセンパイが作業へ呼び戻す挿絵と、Tabletop静的版への案内を添えています。小話一覧は同じ幅のカードを千鳥に並べ、Tabletopの小物SVGを余白に置く構成です。
+
+第5話は、机で修正された[会話原稿](neta/episode-005/005-draft.md)の38発言をもとに制作しました。比較データ4か所を表に整形し、長い会話の途中へ移動できる目次を添えています。
