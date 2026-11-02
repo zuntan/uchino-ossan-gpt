@@ -28,6 +28,9 @@
 /* Keep portraits square and give touch links enough room. */
 .portrait img{width:100%;height:100%;object-fit:contain}.tabletop-promo-links a{min-height:44px;align-items:center}@media(max-width:700px){header .brand,header nav a{min-height:44px;display:flex;align-items:center}header nav{gap:14px}header{padding:10px 0}.tabletop-promo-links{max-width:none}.tabletop-promo-links a{padding:10px 0}}@media(max-width:360px){header .brand{font-size:13px}header nav{gap:10px}header nav a{font-size:10px}.section-title{gap:12px}.section-title p{max-width:150px}}
 
+/* Original screenshots remain readable in a separate tab. */
+.episode-screenshot>a{display:block;cursor:zoom-in}.episode-screenshot figcaption a{display:inline-block;min-height:32px;margin-left:.4em}.episode-screenshot+.episode-screenshot{margin-top:30px}
+
 /* A name-faced conference crowd and one late arrival. */
 .conference-arrival{max-width:700px;margin:60px auto 20px;padding:26px 0 0;border-top:1px dashed var(--line)}.conference-arrival img{width:100%;height:auto}@media(max-width:700px){.conference-arrival{margin:45px auto 12px;padding-top:22px}}
 

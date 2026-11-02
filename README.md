@@ -23,6 +23,7 @@ python3 -m http.server 8765 --bind 127.0.0.1
 - `stories/004-delete-to-create.html`：第4話「消すために、作る。」
 - `stories/005-ai-conference.html`：第5話「国際AI学会、開幕。」
 - `stories/006-izakaya-hallucination.html`：第6話「居酒屋ハルシネーション」
+- `stories/007-galaxy-manual.html`：第7話「銀河の説明書と、ひみつの自慢。」
 - `assets/css/style.css`：共通スタイル
 - `assets/images/`：人物の仮イラスト（SVG）
 - [初期構想・制作方針](docs/initial-concept.md)
@@ -53,5 +54,7 @@ PC幅とスマートフォン幅390pxでブラウザー表示を確認済みで�
 第5話は、机で修正された[会話原稿](neta/episode-005/005-draft.md)の38発言をもとに制作しました。比較データ4か所を表に整形し、長い会話の途中へ移動できる目次を添えています。
 
 第6話は[確認用原稿](neta/episode-006/006-draft.md)の50発言（原稿49発言＋仕様書への反応）を掲載し、机から取り出した居酒屋・スナック・ラウンジの画像3点と、長い会話のためのページ内目次を添えています。
+
+第7話は[確認用原稿](neta/episode-007/007-draft.md)の32発言と机から取り出した画像11点を掲載。画像は別タブで元の大きさに開けます。比較表1点とページ内目次を添えています。
 
 トップページの「小話の舞台裏 → ネタ整理の机を開く」から、原稿・素材を広げた机をTabletop静的版で開けます。リンク先は公開確認済みコミットの `neta/うちのおっさんGPT — ネタ整理.tabletop` です。raw URLのmain参照が古い机を返す場合があるため、公開用の机を更新するときはコミットIDも更新します。

@@ -1,0 +1,79 @@
+[
+  {
+    "number": 1,
+    "deskObjectId": "image-9b756423-044a-40f3-aacf-5e9ef78a3570",
+    "description": "完成した、放射状に広がるTabletopチュートリアルの全体図",
+    "sourceDeskFile": "../うちのおっさんGPT — ネタ整理２.tabletop",
+    "webAsset": "../../assets/images/episode-007/01.png"
+  },
+  {
+    "number": 2,
+    "deskObjectId": "image-f3963133-a3d6-4953-92ba-82eb55c294cc",
+    "description": "チュートリアルの詳細・1枚目",
+    "sourceDeskFile": "../うちのおっさんGPT — ネタ整理２.tabletop",
+    "webAsset": "../../assets/images/episode-007/02.png"
+  },
+  {
+    "number": 3,
+    "deskObjectId": "image-854ac5da-011c-4332-8c96-59a0de2cb907",
+    "description": "チュートリアルの詳細・2枚目",
+    "sourceDeskFile": "../うちのおっさんGPT — ネタ整理２.tabletop",
+    "webAsset": "../../assets/images/episode-007/03.png"
+  },
+  {
+    "number": 4,
+    "deskObjectId": "image-5441e6fd-27ef-4fde-9af4-072085933ebd",
+    "description": "チュートリアルの詳細・3枚目",
+    "sourceDeskFile": "../うちのおっさんGPT — ネタ整理２.tabletop",
+    "webAsset": "../../assets/images/episode-007/04.png"
+  },
+  {
+    "number": 5,
+    "deskObjectId": "image-fc02ec8c-70a2-4de4-9779-1f74d0973bd0",
+    "description": "チュートリアルの詳細・4枚目",
+    "sourceDeskFile": "../うちのおっさんGPT — ネタ整理２.tabletop",
+    "webAsset": "../../assets/images/episode-007/05.png"
+  },
+  {
+    "number": 6,
+    "deskObjectId": "image-a23b0496-faee-4412-ad8d-779664fc78ae",
+    "description": "先輩作品「うちのおっさんGPT」・1枚目",
+    "sourceDeskFile": "../うちのおっさんGPT — ネタ整理２.tabletop",
+    "webAsset": "../../assets/images/episode-007/06.png"
+  },
+  {
+    "number": 7,
+    "deskObjectId": "image-6e1b6bac-88dd-498d-91a5-7969237c027a",
+    "description": "先輩作品のネタ整理机・2枚目",
+    "sourceDeskFile": "../うちのおっさんGPT — ネタ整理２.tabletop",
+    "webAsset": "../../assets/images/episode-007/07.png"
+  },
+  {
+    "number": 8,
+    "deskObjectId": "image-2f81a041-7bb7-4c20-8de3-220eedde57a8",
+    "description": "Mermaidサンプルの画像・1枚目",
+    "sourceDeskFile": "../うちのおっさんGPT — ネタ整理２.tabletop",
+    "webAsset": "../../assets/images/episode-007/08.png"
+  },
+  {
+    "number": 9,
+    "deskObjectId": "image-7a37d7bb-22f0-4c34-9d3e-36f2c0839775",
+    "description": "Mermaidサンプルの画像・2枚目",
+    "sourceDeskFile": "../うちのおっさんGPT — ネタ整理２.tabletop",
+    "webAsset": "../../assets/images/episode-007/09.png"
+  },
+  {
+    "number": 10,
+    "deskObjectId": "image-899a00c8-f27c-496f-80f2-41a728be0f53",
+    "description": "Mermaidサンプルの画像・3枚目",
+    "sourceDeskFile": "../うちのおっさんGPT — ネタ整理２.tabletop",
+    "webAsset": "../../assets/images/episode-007/10.png"
+  },
+  {
+    "number": 11,
+    "deskObjectId": "image-60cc97cb-8112-4358-8225-ff2a45091b57",
+    "description": "Mermaidサンプルの画像・4枚目",
+    "sourceDeskFile": "../うちのおっさんGPT — ネタ整理２.tabletop",
+    "webAsset": "../../assets/images/episode-007/11.png"
+  }
+]
