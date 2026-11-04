@@ -61,3 +61,5 @@
 .story-row:nth-child(6n+4) .story-prop{transform:rotate(8deg)}
 .story-row:nth-child(6n+5) .story-prop{transform:rotate(-13deg)}
 .story-row:nth-child(6n) .story-prop{transform:rotate(5deg)}
+
+.tabletop-promo-links .tabletop-listing-badge{border-bottom:0;justify-content:flex-start}.tabletop-listing-badge img{display:block;max-width:100%;height:auto}
