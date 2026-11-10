@@ -62,4 +62,15 @@
 .story-row:nth-child(6n+5) .story-prop{transform:rotate(-13deg)}
 .story-row:nth-child(6n) .story-prop{transform:rotate(5deg)}
 
-.tabletop-promo-links .tabletop-listing-badge{border-bottom:0;justify-content:flex-start}.tabletop-listing-badge img{display:block;max-width:100%;height:auto}
+.tabletop-promo-badges .tabletop-listing-badge{border-bottom:0;justify-content:flex-start}.tabletop-listing-badge img{display:block;max-width:100%;width:auto;height:48px}
+
+.tabletop-tsukurulog-badge img{width:auto;height:48px}
+
+.tabletop-promo-badges{grid-column:1/-1;display:flex;align-items:center;flex-wrap:wrap;gap:12px 18px}.tabletop-promo-badges a{display:flex;align-items:center;max-width:100%;text-decoration:none}
+@media(max-width:900px){.tabletop-promo-links{flex-wrap:wrap}}
+@media(max-width:700px){.tabletop-promo-badges{margin-top:20px}}
+
+/* Keep the badges within the introduction area beside the link column. */
+@media(min-width:901px){.tabletop-promo{row-gap:12px}.tabletop-promo>div:first-child{grid-column:1;grid-row:1}.tabletop-promo-art{grid-column:2;grid-row:1}.tabletop-promo-links{grid-column:3;grid-row:1 / span 2}.tabletop-promo-badges{grid-column:1 / 3;grid-row:2;align-self:end}}
+@media(min-width:701px) and (max-width:900px){.tabletop-promo-badges{grid-row:3}.tabletop-promo-links{grid-row:2}}
+@media(max-width:700px){.tabletop-promo>div:first-child{order:0}.tabletop-promo-art{order:1}.tabletop-promo-badges{order:3}.tabletop-promo-links{order:2}}
